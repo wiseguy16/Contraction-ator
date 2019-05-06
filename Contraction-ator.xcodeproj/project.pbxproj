@@ -1,0 +1,696 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E1BC7422057051800177C8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1BC7412057051800177C8C /* AppDelegate.swift */; };
+		1E1BC7442057051800177C8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1BC7432057051800177C8C /* ViewController.swift */; };
+		1E1BC7472057051800177C8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1BC7452057051800177C8C /* Main.storyboard */; };
+		1E1BC74A2057051800177C8C /* Contraction_ator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E1BC7482057051800177C8C /* Contraction_ator.xcdatamodeld */; };
+		1E1BC74C2057051800177C8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E1BC74B2057051800177C8C /* Assets.xcassets */; };
+		1E1BC74F2057051800177C8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1BC74D2057051800177C8C /* LaunchScreen.storyboard */; };
+		1E1BC75D2057058B00177C8C /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1BC75C2057058B00177C8C /* NotificationCenter.framework */; };
+		1E1BC7602057058B00177C8C /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1BC75F2057058B00177C8C /* TodayViewController.swift */; };
+		1E1BC7632057058B00177C8C /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1BC7612057058B00177C8C /* MainInterface.storyboard */; };
+		1E1BC7672057058B00177C8C /* ContractCount Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1E1BC75A2057058B00177C8C /* ContractCount Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1E7A11822070790000AE047D /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7A11812070790000AE047D /* EditViewController.swift */; };
+		1E9973C920681C2A00AFEEE4 /* DateValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9973C820681C2A00AFEEE4 /* DateValueFormatter.swift */; };
+		1EE2ADD8205D6F5000D8F120 /* Contraktion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE2ADD7205D6F5000D8F120 /* Contraktion.swift */; };
+		1EE2ADDA205D6FFE00D8F120 /* DetailContractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE2ADD9205D6FFE00D8F120 /* DetailContractionViewController.swift */; };
+		1EF9E7FF20580E560004CD93 /* Contraction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF9E7FD20580E560004CD93 /* Contraction+CoreDataClass.swift */; };
+		1EF9E80020580E560004CD93 /* Contraction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF9E7FE20580E560004CD93 /* Contraction+CoreDataProperties.swift */; };
+		1EF9E80220580EF10004CD93 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF9E80120580EF10004CD93 /* CoreDataManager.swift */; };
+		1EF9E804205861D40004CD93 /* ContractionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF9E803205861D40004CD93 /* ContractionTableViewCell.swift */; };
+		1EF9E8062059AC390004CD93 /* TimerBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF9E8052059AC390004CD93 /* TimerBrain.swift */; };
+		1EF9E814205AB3FD0004CD93 /* Nils Frahm - You (Screws Reworked).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1EF9E813205AB3FD0004CD93 /* Nils Frahm - You (Screws Reworked).mp3 */; };
+		1EF9E818205B136A0004CD93 /* Kontraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF9E817205B136A0004CD93 /* Kontraction.swift */; };
+		27ECE34A238694D7F8FE7778 /* Pods_Contraction_ator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E9007CE34FC7C1EB1A2E72D /* Pods_Contraction_ator.framework */; };
+		F9FA91441C1E8ABD8B518963 /* Pods_ContractCount_Widget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86CA9F08D75A61397EA48274 /* Pods_ContractCount_Widget.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1E1BC7652057058B00177C8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E1BC7362057051800177C8C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E1BC7592057058B00177C8C;
+			remoteInfo = "ContractCount Widget";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1E1BC76B2057058B00177C8C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1E1BC7672057058B00177C8C /* ContractCount Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		01B13E40E2FE624CADF7320E /* Pods-Contraction-ator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contraction-ator.release.xcconfig"; path = "Pods/Target Support Files/Pods-Contraction-ator/Pods-Contraction-ator.release.xcconfig"; sourceTree = "<group>"; };
+		14D2EBC68AC59210EE41B5BC /* Pods-Contraction-ator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contraction-ator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Contraction-ator/Pods-Contraction-ator.debug.xcconfig"; sourceTree = "<group>"; };
+		1E1BC73E2057051800177C8C /* Contraction-ator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Contraction-ator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E1BC7412057051800177C8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1E1BC7432057051800177C8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1E1BC7462057051800177C8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1E1BC7492057051800177C8C /* Contraction_ator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Contraction_ator.xcdatamodel; sourceTree = "<group>"; };
+		1E1BC74B2057051800177C8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1E1BC74E2057051800177C8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1E1BC7502057051800177C8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E1BC75A2057058B00177C8C /* ContractCount Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ContractCount Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E1BC75C2057058B00177C8C /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		1E1BC75F2057058B00177C8C /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		1E1BC7622057058B00177C8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		1E1BC7642057058B00177C8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E7A11812070790000AE047D /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		1E9973C820681C2A00AFEEE4 /* DateValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateValueFormatter.swift; sourceTree = "<group>"; };
+		1EE2ADD7205D6F5000D8F120 /* Contraktion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contraktion.swift; sourceTree = "<group>"; };
+		1EE2ADD9205D6FFE00D8F120 /* DetailContractionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContractionViewController.swift; sourceTree = "<group>"; };
+		1EF9E7FD20580E560004CD93 /* Contraction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contraction+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1EF9E7FE20580E560004CD93 /* Contraction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contraction+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1EF9E80120580EF10004CD93 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		1EF9E803205861D40004CD93 /* ContractionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractionTableViewCell.swift; sourceTree = "<group>"; };
+		1EF9E8052059AC390004CD93 /* TimerBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerBrain.swift; sourceTree = "<group>"; };
+		1EF9E813205AB3FD0004CD93 /* Nils Frahm - You (Screws Reworked).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Nils Frahm - You (Screws Reworked).mp3"; sourceTree = "<group>"; };
+		1EF9E815205AB9340004CD93 /* ContractCount Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ContractCount Widget.entitlements"; sourceTree = "<group>"; };
+		1EF9E816205AB9B50004CD93 /* Contraction-ator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Contraction-ator.entitlements"; sourceTree = "<group>"; };
+		1EF9E817205B136A0004CD93 /* Kontraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kontraction.swift; sourceTree = "<group>"; };
+		4E9007CE34FC7C1EB1A2E72D /* Pods_Contraction_ator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Contraction_ator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86CA9F08D75A61397EA48274 /* Pods_ContractCount_Widget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContractCount_Widget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8967F16A987892F49E4C02A4 /* Pods-ContractCount Widget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContractCount Widget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContractCount Widget/Pods-ContractCount Widget.debug.xcconfig"; sourceTree = "<group>"; };
+		C150D76F2DB091FD19F98782 /* Pods-ContractCount Widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContractCount Widget.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContractCount Widget/Pods-ContractCount Widget.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E1BC73B2057051800177C8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27ECE34A238694D7F8FE7778 /* Pods_Contraction_ator.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E1BC7572057058B00177C8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E1BC75D2057058B00177C8C /* NotificationCenter.framework in Frameworks */,
+				F9FA91441C1E8ABD8B518963 /* Pods_ContractCount_Widget.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E1BC7352057051800177C8C = {
+			isa = PBXGroup;
+			children = (
+				1E1BC7402057051800177C8C /* Contraction-ator */,
+				1E1BC75E2057058B00177C8C /* ContractCount Widget */,
+				1E1BC75B2057058B00177C8C /* Frameworks */,
+				1E1BC73F2057051800177C8C /* Products */,
+				3B5339FDAE4AB347DB001306 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		1E1BC73F2057051800177C8C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E1BC73E2057051800177C8C /* Contraction-ator.app */,
+				1E1BC75A2057058B00177C8C /* ContractCount Widget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E1BC7402057051800177C8C /* Contraction-ator */ = {
+			isa = PBXGroup;
+			children = (
+				1EF9E816205AB9B50004CD93 /* Contraction-ator.entitlements */,
+				1EF9E7FC20580D160004CD93 /* Contraction */,
+				1E1BC7412057051800177C8C /* AppDelegate.swift */,
+				1E1BC7432057051800177C8C /* ViewController.swift */,
+				1E7A11812070790000AE047D /* EditViewController.swift */,
+				1EE2ADD9205D6FFE00D8F120 /* DetailContractionViewController.swift */,
+				1EE2ADD7205D6F5000D8F120 /* Contraktion.swift */,
+				1EF9E8052059AC390004CD93 /* TimerBrain.swift */,
+				1E9973C820681C2A00AFEEE4 /* DateValueFormatter.swift */,
+				1EF9E803205861D40004CD93 /* ContractionTableViewCell.swift */,
+				1EF9E80120580EF10004CD93 /* CoreDataManager.swift */,
+				1E1BC7452057051800177C8C /* Main.storyboard */,
+				1E1BC74B2057051800177C8C /* Assets.xcassets */,
+				1E1BC74D2057051800177C8C /* LaunchScreen.storyboard */,
+				1E1BC7502057051800177C8C /* Info.plist */,
+				1E1BC7482057051800177C8C /* Contraction_ator.xcdatamodeld */,
+				1EF9E813205AB3FD0004CD93 /* Nils Frahm - You (Screws Reworked).mp3 */,
+			);
+			path = "Contraction-ator";
+			sourceTree = "<group>";
+		};
+		1E1BC75B2057058B00177C8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E1BC75C2057058B00177C8C /* NotificationCenter.framework */,
+				86CA9F08D75A61397EA48274 /* Pods_ContractCount_Widget.framework */,
+				4E9007CE34FC7C1EB1A2E72D /* Pods_Contraction_ator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1E1BC75E2057058B00177C8C /* ContractCount Widget */ = {
+			isa = PBXGroup;
+			children = (
+				1EF9E815205AB9340004CD93 /* ContractCount Widget.entitlements */,
+				1E1BC75F2057058B00177C8C /* TodayViewController.swift */,
+				1EF9E817205B136A0004CD93 /* Kontraction.swift */,
+				1E1BC7612057058B00177C8C /* MainInterface.storyboard */,
+				1E1BC7642057058B00177C8C /* Info.plist */,
+			);
+			path = "ContractCount Widget";
+			sourceTree = "<group>";
+		};
+		1EF9E7FC20580D160004CD93 /* Contraction */ = {
+			isa = PBXGroup;
+			children = (
+				1EF9E7FD20580E560004CD93 /* Contraction+CoreDataClass.swift */,
+				1EF9E7FE20580E560004CD93 /* Contraction+CoreDataProperties.swift */,
+			);
+			path = Contraction;
+			sourceTree = "<group>";
+		};
+		3B5339FDAE4AB347DB001306 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8967F16A987892F49E4C02A4 /* Pods-ContractCount Widget.debug.xcconfig */,
+				C150D76F2DB091FD19F98782 /* Pods-ContractCount Widget.release.xcconfig */,
+				14D2EBC68AC59210EE41B5BC /* Pods-Contraction-ator.debug.xcconfig */,
+				01B13E40E2FE624CADF7320E /* Pods-Contraction-ator.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1E1BC73D2057051800177C8C /* Contraction-ator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E1BC7532057051800177C8C /* Build configuration list for PBXNativeTarget "Contraction-ator" */;
+			buildPhases = (
+				19599E71AB59F13E454CA774 /* [CP] Check Pods Manifest.lock */,
+				1E1BC73A2057051800177C8C /* Sources */,
+				1E1BC73B2057051800177C8C /* Frameworks */,
+				1E1BC73C2057051800177C8C /* Resources */,
+				1E1BC76B2057058B00177C8C /* Embed App Extensions */,
+				086E3F93CF6A7881D388B2E1 /* [CP] Embed Pods Frameworks */,
+				B45EF1112DB568BA5DA11736 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E1BC7662057058B00177C8C /* PBXTargetDependency */,
+			);
+			name = "Contraction-ator";
+			productName = "Contraction-ator";
+			productReference = 1E1BC73E2057051800177C8C /* Contraction-ator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1E1BC7592057058B00177C8C /* ContractCount Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E1BC7682057058B00177C8C /* Build configuration list for PBXNativeTarget "ContractCount Widget" */;
+			buildPhases = (
+				9E0CAE598A4CD61D132CD8C3 /* [CP] Check Pods Manifest.lock */,
+				1E1BC7562057058B00177C8C /* Sources */,
+				1E1BC7572057058B00177C8C /* Frameworks */,
+				1E1BC7582057058B00177C8C /* Resources */,
+				B0B6088A3FA2EDED56C4E18A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ContractCount Widget";
+			productName = "ContractCount Widget";
+			productReference = 1E1BC75A2057058B00177C8C /* ContractCount Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1E1BC7362057051800177C8C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Greg Weiss";
+				TargetAttributes = {
+					1E1BC73D2057051800177C8C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					1E1BC7592057058B00177C8C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 1E1BC7392057051800177C8C /* Build configuration list for PBXProject "Contraction-ator" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1E1BC7352057051800177C8C;
+			productRefGroup = 1E1BC73F2057051800177C8C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1E1BC73D2057051800177C8C /* Contraction-ator */,
+				1E1BC7592057058B00177C8C /* ContractCount Widget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E1BC73C2057051800177C8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E1BC74F2057051800177C8C /* LaunchScreen.storyboard in Resources */,
+				1EF9E814205AB3FD0004CD93 /* Nils Frahm - You (Screws Reworked).mp3 in Resources */,
+				1E1BC74C2057051800177C8C /* Assets.xcassets in Resources */,
+				1E1BC7472057051800177C8C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E1BC7582057058B00177C8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E1BC7632057058B00177C8C /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		086E3F93CF6A7881D388B2E1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Contraction-ator/Pods-Contraction-ator-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Contraction-ator/Pods-Contraction-ator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		19599E71AB59F13E454CA774 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Contraction-ator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E0CAE598A4CD61D132CD8C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ContractCount Widget-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0B6088A3FA2EDED56C4E18A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContractCount Widget/Pods-ContractCount Widget-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B45EF1112DB568BA5DA11736 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Contraction-ator/Pods-Contraction-ator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E1BC73A2057051800177C8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EF9E8062059AC390004CD93 /* TimerBrain.swift in Sources */,
+				1EF9E80220580EF10004CD93 /* CoreDataManager.swift in Sources */,
+				1EF9E80020580E560004CD93 /* Contraction+CoreDataProperties.swift in Sources */,
+				1E9973C920681C2A00AFEEE4 /* DateValueFormatter.swift in Sources */,
+				1E1BC74A2057051800177C8C /* Contraction_ator.xcdatamodeld in Sources */,
+				1EE2ADDA205D6FFE00D8F120 /* DetailContractionViewController.swift in Sources */,
+				1E1BC7442057051800177C8C /* ViewController.swift in Sources */,
+				1EF9E7FF20580E560004CD93 /* Contraction+CoreDataClass.swift in Sources */,
+				1E7A11822070790000AE047D /* EditViewController.swift in Sources */,
+				1EF9E804205861D40004CD93 /* ContractionTableViewCell.swift in Sources */,
+				1EE2ADD8205D6F5000D8F120 /* Contraktion.swift in Sources */,
+				1E1BC7422057051800177C8C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E1BC7562057058B00177C8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EF9E818205B136A0004CD93 /* Kontraction.swift in Sources */,
+				1E1BC7602057058B00177C8C /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1E1BC7662057058B00177C8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E1BC7592057058B00177C8C /* ContractCount Widget */;
+			targetProxy = 1E1BC7652057058B00177C8C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1E1BC7452057051800177C8C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E1BC7462057051800177C8C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1E1BC74D2057051800177C8C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E1BC74E2057051800177C8C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1E1BC7612057058B00177C8C /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E1BC7622057058B00177C8C /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1E1BC7512057051800177C8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1E1BC7522057051800177C8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1E1BC7542057051800177C8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14D2EBC68AC59210EE41B5BC /* Pods-Contraction-ator.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Contraction-ator/Contraction-ator.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q8WPW9BZ33;
+				INFOPLIST_FILE = "Contraction-ator/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gergusa04.Contraction-ator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E1BC7552057051800177C8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01B13E40E2FE624CADF7320E /* Pods-Contraction-ator.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Contraction-ator/Contraction-ator.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q8WPW9BZ33;
+				INFOPLIST_FILE = "Contraction-ator/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gergusa04.Contraction-ator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1E1BC7692057058B00177C8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8967F16A987892F49E4C02A4 /* Pods-ContractCount Widget.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "ContractCount Widget/ContractCount Widget.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q8WPW9BZ33;
+				INFOPLIST_FILE = "ContractCount Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gergusa04.Contraction-ator.ContractCount-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E1BC76A2057058B00177C8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C150D76F2DB091FD19F98782 /* Pods-ContractCount Widget.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "ContractCount Widget/ContractCount Widget.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q8WPW9BZ33;
+				INFOPLIST_FILE = "ContractCount Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gergusa04.Contraction-ator.ContractCount-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E1BC7392057051800177C8C /* Build configuration list for PBXProject "Contraction-ator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E1BC7512057051800177C8C /* Debug */,
+				1E1BC7522057051800177C8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E1BC7532057051800177C8C /* Build configuration list for PBXNativeTarget "Contraction-ator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E1BC7542057051800177C8C /* Debug */,
+				1E1BC7552057051800177C8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E1BC7682057058B00177C8C /* Build configuration list for PBXNativeTarget "ContractCount Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E1BC7692057058B00177C8C /* Debug */,
+				1E1BC76A2057058B00177C8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1E1BC7482057051800177C8C /* Contraction_ator.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1E1BC7492057051800177C8C /* Contraction_ator.xcdatamodel */,
+			);
+			currentVersion = 1E1BC7492057051800177C8C /* Contraction_ator.xcdatamodel */;
+			path = Contraction_ator.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1E1BC7362057051800177C8C /* Project object */;
+}
