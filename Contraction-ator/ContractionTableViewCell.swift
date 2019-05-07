@@ -11,21 +11,12 @@ import UIKit
 class ContractionTableViewCell: UITableViewCell {
     
     @IBOutlet weak var lengthLabel: UILabel!
-    
     @IBOutlet weak var dateHadLabel: UILabel!
-    
     @IBOutlet weak var timeSinceLastLabel: UILabel!
-    
     @IBOutlet weak var dialationLabel: UILabel!
-    
-    
     @IBOutlet weak var avgContractionLabel: UILabel!
-    
     @IBOutlet weak var avgApartLabel: UILabel!
-    
     @IBOutlet weak var noteLabel: UILabel!
-    
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()

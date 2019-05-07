@@ -44,9 +44,6 @@ class EditViewController: UIViewController  {
         saveButton.layer.masksToBounds = true
         
         setupView()
-        
-
-        // Do any additional setup after loading the view.
     }
     @IBAction func saveTapped(_ sender: UIButton) {
         moc.saveChanges()
@@ -65,7 +62,6 @@ class EditViewController: UIViewController  {
             
         }
     }
-    
 
     @IBAction func cancelTapped(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
@@ -77,19 +73,14 @@ class EditViewController: UIViewController  {
         contraction.dateHadStarted = datePicker.date
     }
     
-    
     @IBAction func intesityChanged(_ sender: UISlider) {
         let currentValue = Int(sender.value)
-        let intensity = TimerBrain.convertIntensity(currentValue: currentValue)
         
         DispatchQueue.main.async {
             self.intesityLabel.text = "Intensity: \(currentValue)"
         }
-        let currentSliderVal = intensitySlider.value
         contraction.dialation = Int(intensitySlider.value)
     }
-    
-    
     
     func setupView() {
         if let note = contraction.note {
@@ -100,16 +91,12 @@ class EditViewController: UIViewController  {
         dateFormatter.dateFormat = "MMM d, h:mm a"
         guard let contractionDate = contraction.dateHadStarted else { return }
         
-        let dayHad = dateFormatter.string(from: contractionDate)
         datePicker.setDate(contractionDate, animated: true)
-        //cell.dateHadLabel.text = dayHad
         let length = TimerBrain.shortTimeString(time: contraction.duration)
         durationTextField.text = "\(length)"
         
         let previous = TimerBrain.timeString(time: contraction.timeSinceLast)
         timeApartTextFiled.text = "\(previous)"
-        let avgCntrct = TimerBrain.shortTimeString(time: contraction.averageDuration)
-        //cell.avgContractionLabel.text = "\(avgCntrct)"
         var avgInterval = TimerBrain.timeString(time: contraction.averageTimeApart)
         let parts = avgInterval.components(separatedBy: ":")
         if parts.first == "00" {
@@ -117,18 +104,13 @@ class EditViewController: UIViewController  {
             avgInterval.remove(at: avgInterval.startIndex)
             avgInterval.remove(at: avgInterval.startIndex)
         }
-        //cell.avgApartLabel.text = "\(avgInterval)"
-        let intenseWord = TimerBrain.convertIntensity(currentValue: contraction.dialation)
-        //cell.dialationLabel.text = "\(contraction.dialation) (\(intenseWord))"
         let sliderVal = Float(contraction.dialation)
         intensitySlider.setValue(sliderVal, animated: false)
         self.intesityLabel.text = "Intensity: \(contraction.dialation)"
-    
     }
 
-   
-
 }
+
 extension EditViewController {
     
     func convertTimeDisplayToDouble(_ display: String) -> Double {
@@ -212,5 +194,6 @@ extension EditViewController: UITextFieldDelegate, UITextViewDelegate {
         self.view.endEditing(true)
         return true
     }
+    
 }
 

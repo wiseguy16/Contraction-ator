@@ -9,7 +9,6 @@
 import UIKit
 import CoreData
 
-
 public class TimerBrain {
     
     static let shared = TimerBrain()
@@ -28,8 +27,6 @@ public class TimerBrain {
         isTimerRunning = false
     }
     
-
-    
     static func timeString(time: TimeInterval) -> String {
         let hours = Int(time) / 3600
         let minutes = Int(time) / 60 % 60
@@ -39,10 +36,7 @@ public class TimerBrain {
         return word
     }
     
-    
-    
     static func shortTimeString(time: TimeInterval) -> String {
-        //let hours = Int(time) / 3600
         let minutes = Int(time) / 60 % 60
         let secondz = Int(time) % 60
         

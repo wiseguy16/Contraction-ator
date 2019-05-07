@@ -25,14 +25,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var goView: UIView!
-    
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var sliderLabel: UILabel!
     @IBOutlet weak var slider: UISlider!
-    
     @IBOutlet weak var severeLabel: UILabel!
     @IBOutlet weak var lightLabel: UILabel!
-    
     @IBOutlet weak var lastHourLabel: UILabel!
     
     var contractions = [Contraction]()
@@ -40,35 +37,19 @@ class ViewController: UIViewController {
     let moc = CoreDataManager().managedObjectContext
     
     let widgetDefaults = UserDefaults(suiteName: "group.com.gergusa04.Contraction-ator")!
-
-   // let commandCenter = MPRemoteCommandCenter.shared()
     
     lazy var frc: NSFetchedResultsController<Contraction> = {
         let request: NSFetchRequest<Contraction> = Contraction.fetchRequest()
         let controller = NSFetchedResultsController(fetchRequest: request, managedObjectContext: self.moc, sectionNameKeyPath: nil, cacheName: nil)
         return controller
     }()
-    
 
-    
     let brain = TimerBrain.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        frc.delegate = self
-        lightLabel.text = "1\nlight"
-        severeLabel.text = "10\nsevere"
 
-        //tableView.contentInset = UIEdgeInsetsMake(20.0, 0.0, 0.0, 0.0)
-        tableView.estimatedRowHeight = 80
-        tableView.rowHeight = UITableViewAutomaticDimension
-        startButton.layer.cornerRadius = 10
-        startButton.layer.masksToBounds = true
-        timeLabel.layer.cornerRadius = 10
-        timeLabel.layer.masksToBounds = true
-        goView.layer.cornerRadius = 17
-        goView.layer.masksToBounds = true
-        self.tableView.tableFooterView = UIView()
+        setupUI()
         
         frc.delegate = self
         
@@ -92,9 +73,19 @@ class ViewController: UIViewController {
         tableView.reloadData()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
+    func setupUI() {
+        lightLabel.text = "1\nlight"
+        severeLabel.text = "10\nsevere"
         
+        tableView.estimatedRowHeight = 80
+        tableView.rowHeight = UITableViewAutomaticDimension
+        startButton.layer.cornerRadius = 10
+        startButton.layer.masksToBounds = true
+        timeLabel.layer.cornerRadius = 10
+        timeLabel.layer.masksToBounds = true
+        goView.layer.cornerRadius = 17
+        goView.layer.masksToBounds = true
+        self.tableView.tableFooterView = UIView()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -102,7 +93,6 @@ class ViewController: UIViewController {
             if let destination = segue.destination as? EditViewController,
                 let indexPath = tableView.indexPathForSelectedRow {
                 let contraction = frc.object(at: indexPath)
-                //let contraction = contractions[indexPath.row]
                 destination.contraction = contraction
                 destination.moc = moc
             }
@@ -114,9 +104,6 @@ class ViewController: UIViewController {
 
         }
     }
-        
-        
-
  
     
     @IBAction func chartTapped(_ sender: UIBarButtonItem) {
@@ -125,16 +112,10 @@ class ViewController: UIViewController {
         
         // Instantiate View Controller
         let viewController = storyboard.instantiateViewController(withIdentifier: "DetailContractionViewController") as! DetailContractionViewController
-       // viewController.contraction = contraction
         viewController.context = moc
-        navigationController?.show(viewController, sender: sender)  //present(viewController, animated: true) {
-           // self.tableView.reloadData()
-       // }
-        
-        
-
-        
+        navigationController?.show(viewController, sender: sender)
     }
+    
     @IBAction func resetAllTapped(_ sender: UIBarButtonItem) {
         // Create Fetch Request
         let fetchRequest: NSFetchRequest<Contraction> = NSFetchRequest(entityName: Contraction.EntityName)
@@ -177,19 +158,7 @@ class ViewController: UIViewController {
         }
         
         adjustButton()
-        
-        print("isTimerRunning = \(brain.isTimerRunning)")
-        print("seconds = \(brain.seconds)")
-        if let contr = contractions.last {
-            print("\(contr.duration)")
-            print("\(String(describing: contr.dateHadStarted))")
-        }
-        if let contra = contractions.first {
-            print("\(contra.duration)")
-            print("\(String(describing: contra.dateHadStarted))")
-        }
     }
-    
     
     func setupAndStartTimer() {
         if !brain.isTimerRunning {
@@ -202,7 +171,6 @@ class ViewController: UIViewController {
         let duration = TimeInterval(brain.seconds)
         
         let contraction = NSEntityDescription.insertNewObject(forEntityName: Contraction.EntityName, into: moc) as! Contraction
-        //let contraction = Contraktion()
         contraction.duration = duration
         contraction.dateHadStarted = (Date() - duration)
         contraction.dateHadFinished = Date()
@@ -212,7 +180,6 @@ class ViewController: UIViewController {
             let contrct = objects.first
             guard let dateHadStart = contrct?.dateHadStarted else { return }
             contraction.lastContractionStamp = dateHadStart
-            //guard let dateHadFinish = contrct?.dateHadFinished else { return }
             contraction.timeSinceLast = (dateHadStart.timeIntervalSinceNow * -1) - (duration)
             let lastInterval = contraction.timeSinceLast
             contraction.averageTimeApart = avgApartLast3(including: lastInterval)
@@ -291,9 +258,6 @@ class ViewController: UIViewController {
         }
         contraction.averageDuration = averageLast3(including: duration)
         contraction.UUID = NSUUID().uuidString
-        let durationDouble = Double(duration)
-        //        widgetDefaults.set(durationDouble, forKey: "WidgetLastDuration")
-        //        widgetDefaults.synchronize()
         
         var kontractDictionary = widgetDefaults.dictionary(forKey: "ITEMS_KEY") ?? Dictionary()
         kontractDictionary[(contraction.UUID ?? "")] = Contraktion.contraktionToDict(contrak: contraction)
@@ -308,8 +272,6 @@ class ViewController: UIViewController {
 extension ViewController {
     
     func averageInLastHour() {
-       // let now = Date()
-       // var averagingContractions: [Contraction] = []
         let keyDate = Date(timeIntervalSinceNow: -60 * 60 )
         guard let objects = frc.fetchedObjects else { return }
         if objects.count > 0 {
@@ -321,12 +283,7 @@ extension ViewController {
             let lastHourReady = haveTheyBeenGoingOnForHour(contractions: lastHourContractions, duration: lastHourAvgDuration, apart: lastHourAvgTimeApart)
             goView.backgroundColor = (lastHourReady) ? .green : .red
             lastHourLabel.text = "Last hr: \(TimerBrain.shortTimeString(time: lastHourAvgTimeApart)) apart\nlasting \(TimerBrain.shortTimeString(time: lastHourAvgDuration)) seconds"
-            
-            print("lastHourAvgDuration \(lastHourAvgDuration)\n")
-            print("lastHourAvgTimeApart \(lastHourAvgTimeApart)\n")
         }
-
-                
         
     }
     
@@ -449,7 +406,6 @@ extension ViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return frc.sections?.count ?? 0
-       // return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -457,14 +413,12 @@ extension ViewController: UITableViewDataSource {
             return 0
         }
         return section.numberOfObjects
-        //return contractions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContractionTableViewCell", for: indexPath) as! ContractionTableViewCell
         
         let contraction = frc.object(at: indexPath)
-       // let contraction = contractions[indexPath.row]
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMM d, h:mm a"
         guard let contractionDate = contraction.dateHadStarted else { return UITableViewCell() }
@@ -495,22 +449,12 @@ extension ViewController: UITableViewDataSource {
         } else {
             cell.noteLabel.alpha = 0.0
         }
-        
-
-        
-
         return cell
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]?
     {
-        // Whenever a user swipes a cell, we will show two options.
-        // A option to mark a task completed.
-//        let editAction = UITableViewRowAction(style: UITableViewRowActionStyle.normal, title: "Edit" , handler: { (action:UITableViewRowAction!, indexPath:IndexPath!) -> Void in
-//            self.editContraction(indexPath)
-//        })
-        
-        // And a option to delete a task.
+
         let deleteAction = UITableViewRowAction(style: UITableViewRowActionStyle.destructive, title: "Delete" , handler: { (action:UITableViewRowAction!, indexPath:IndexPath!) -> Void in
             self.deleteTaskIn(indexPath)
         })
@@ -530,9 +474,6 @@ extension ViewController: UITableViewDataSource {
             self.tableView.reloadData()
         }
         
-        // Update the attribute
-        //task.completed = true
-        
         do {
             // And try to persist the change. If successfull
             // the fetched results controller will react and call the method
@@ -549,7 +490,6 @@ extension ViewController: UITableViewDataSource {
         let deleteAlert = UIAlertController(title: "Delete contraction?", message: "This contraction will be deleted.", preferredStyle: UIAlertControllerStyle.alert)
         
         deleteAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
-            print("Handle Ok logic here")
             // Then we use the managed object context and delete that object.
             self.moc.delete(contraction)
             
@@ -568,8 +508,6 @@ extension ViewController: UITableViewDataSource {
         
         present(deleteAlert, animated: true, completion: nil)
         
-        
- 
     }
     
     func setbackgroundForDuration(time: Double) -> UIColor {
@@ -592,8 +530,7 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let contraction = frc.object(at: indexPath)
-        //let contraction = contractions[indexPath.row]
+        let _ = frc.object(at: indexPath)
     }
     
 }

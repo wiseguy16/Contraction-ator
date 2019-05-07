@@ -19,7 +19,7 @@ public class Contraktion {
     var averageTimeApart: Double?
     var averageDuration: Double?
     var lastContractionStamp: Date?
-    var UUID: String? //NSUUID().uuidString
+    var UUID: String? 
     
     init(dict: [String: Any]) {
         self.duration = dict["duration"] as? Double
