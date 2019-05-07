@@ -147,16 +147,13 @@ extension EditViewController: UITextFieldDelegate, UITextViewDelegate {
         if textField == durationTextField {
             guard let duration = textField.text else { return }
             let timeAsDouble = convertTimeDisplayToDouble(duration)
-            debugPrint("durationTextField \(timeAsDouble)")
             contraction.duration = timeAsDouble
         }
         if textField == timeApartTextFiled {
             guard let timeSinceLast = textField.text else { return }
             let timeAsDouble = convertTimeDisplayToDouble(timeSinceLast)
-            debugPrint("timeApartTextFiled \(timeAsDouble)")
             contraction.timeSinceLast = timeAsDouble
         }
-        debugPrint("textFieldDidEndEditing \(textField.text ?? "nothing here")")
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
@@ -180,16 +177,13 @@ extension EditViewController: UITextFieldDelegate, UITextViewDelegate {
         if textField == durationTextField {
             guard let duration = textField.text else { return false }
             let timeAsDouble = convertTimeDisplayToDouble(duration)
-            debugPrint("durationTextField \(timeAsDouble)")
             contraction.duration = timeAsDouble
         }
         if textField == timeApartTextFiled {
             guard let timeSinceLast = textField.text else { return false  }
             let timeAsDouble = convertTimeDisplayToDouble(timeSinceLast)
-            debugPrint("timeApartTextFiled \(timeAsDouble)")
             contraction.timeSinceLast = timeAsDouble
         }
-        debugPrint("textFieldShouldReturn \(textField.text ?? "nothing here")")
 
         self.view.endEditing(true)
         return true

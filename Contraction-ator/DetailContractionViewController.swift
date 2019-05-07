@@ -35,9 +35,6 @@ class DetailContractionViewController: UIViewController {
             try frc.performFetch()
             if let objects = frc.fetchedObjects {
                 contractions = objects
-                for obj in objects {
-                    print("obj.duration >> \(obj.duration)")
-                }
             }
         } catch {
             print("Error fetching Contraction objects: \(error.localizedDescription)")
@@ -93,7 +90,6 @@ class DetailContractionViewController: UIViewController {
         for cont in contractions {
             var xPos: Double = 0.0
             if let dateHadStarted = cont.dateHadStarted {
-                print("\(dateHadStarted)")
                 let xxPos = dateHadStarted.timeIntervalSince(Date())
                 xPos = (xxPos * 1.667)/100
             }
@@ -126,7 +122,6 @@ class DetailContractionViewController: UIViewController {
         for cont in contractions {
             var xPos: Double = 0.0
             if let dateHadStarted = cont.dateHadStarted {
-                print("\(dateHadStarted)")
                 let xxPos = dateHadStarted.timeIntervalSince(Date())
                 xPos = (xxPos * 1.667)/100
             }
@@ -155,10 +150,8 @@ class DetailContractionViewController: UIViewController {
 
 extension DetailContractionViewController: NSFetchedResultsControllerDelegate {
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        //tableView.reloadData()
         if let _ = frc.fetchedObjects {
             print("Got objects")
-           // contractions = objects
         }
     }
     
